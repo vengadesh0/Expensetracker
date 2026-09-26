@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.container > p {
+    text-align: center;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* Balance */
+
+.balance-card {
+    background: #222;
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.balance-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.balance-card h2 {
+    font-size: 32px;
+}
+
+/* Income & Expense */
+
+.summary {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.income,
+.expense {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.income p {
+    margin-top: 8px;
+    font-size: 20px;
+}
+
+.expense p {
+    margin-top: 8px;
+    font-size: 20px;
+}
+
+/* Form */
+
+.form-section {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.form-section h2,
+.transactions h2 {
+    margin-bottom: 15px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+/* Transactions */
+
+.transactions {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+#transactionList {
+    list-style: none;
+}
+
+#transactionList li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+.delete-btn {
+    width: auto;
+    padding: 6px 10px;
+    margin-left: 10px;
+    background: #d33;
+    font-size: 12px;
+}
+.filters {
+    display: flex;
+    gap: 10px;
+}
+
+.filters input,
+.filters select {
+    margin-bottom: 15px;
+}
+
+.filters input {
+    flex: 2;
+}
+
+.filters select {
+    flex: 1;
+}
+.chart-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.chart {
+    height: 200px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 20px;
+}
+
+.bar {
+    width: 55px;
+    height: 100%;
+    background: #eee;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    display: flex;
+    align-items: end;
+}
+
+.bar span {
+    display: block;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    transition: height 0.4s ease;
+}
+
+.income-bar span {
+    background: #22c55e;
+}
+
+.expense-bar span {
+    background: #ef4444;
+}
+
+.chart-labels {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.theme-btn {
+    display: block;
+    width: 45px;
+    margin: 0 auto 20px;
+    padding: 8px;
+    font-size: 20px;
+    background: white;
+    color: #222;
+    border: 1px solid #ddd;
+}
+
+/* Dark Mode */
+
+body.dark {
+    background: #121212;
+    color: white;
+}
+
+body.dark .income,
+body.dark .expense,
+body.dark .form-section,
+body.dark .transactions,
+body.dark .chart-card {
+    background: #1e1e1e;
+    color: white;
+}
+
+body.dark input,
+body.dark select {
+    background: #2a2a2a;
+    color: white;
+    border-color: #444;
+}
+
+body.dark .theme-btn {
+    background: #2a2a2a;
+    color: white;
+    border-color: #444;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .summary {
+        flex-direction: column;
+    }
+
+    .chart {
+        gap: 40px;
+    }
+
+    #transactionList li {
+        font-size: 14px;
+    }
+
+    .delete-btn {
+        margin-left: 5px;
+        padding: 5px 7px;
+    }
+}
+.edit-btn {
+    width: auto;
+    padding: 6px 10px;
+    margin-left: 5px;
+    background: #555;
+    font-size: 12px;
+}
+
+#transactionList li {
+    align-items: center;
+    gap: 10px;
+}
+
+#transactionList small {
+    color: #888;
+    font-size: 11px;
+}

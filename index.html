@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Expense Tracker</h1><button id="themeBtn" class="theme-btn">🌙</button>
+        <p>Manage your money easily 💰</p>
+
+        <div class="balance-card">
+            <h3>Current Balance</h3>
+            <h2 id="balance">₹0</h2>
+        </div>
+
+        <div class="summary">
+            <div class="chart-card">
+    <h2>Overview</h2>
+
+    <div class="chart">
+        <div class="bar income-bar">
+            <span id="incomeBar"></span>
+        </div>
+
+        <div class="bar expense-bar">
+            <span id="expenseBar"></span>
+        </div>
+    </div>
+
+    <div class="chart-labels">
+        <span>Income</span>
+        <span>Expense</span>
+    </div>
+</div>
+            <div class="income">
+                <h4>Income</h4>
+                <p id="income">₹0</p>
+            </div>
+
+            <div class="expense">
+                <h4>Expense</h4>
+                <p id="expense">₹0</p>
+            </div>
+        </div>
+
+        <div class="form-section">
+
+            <h2>Add Transaction</h2>
+
+            <input
+                type="text"
+                id="description"
+                placeholder="Description"
+            >
+
+            <input
+                type="number"
+                id="amount"
+                placeholder="Amount"
+            >
+
+            <select id="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+
+            <button id="addBtn">Add Transaction</button>
+
+        </div>
+
+        <div class="transactions">
+
+            <h2>Transactions</h2>
+            <div class="filters">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search transaction..."
+    >
+
+    <select id="filterInput">
+        <option value="all">All</option>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+    </select>
+</div>
+
+<ul id="transactionList"></ul>
+
+            <ul id="transactionList"></ul>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
